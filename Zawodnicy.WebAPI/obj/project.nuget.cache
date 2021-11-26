@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EvNbw4xjCgBwfWzrMq4FCqVCpAkDm3nvpvtdXorbBLzz4G5/agqosdDbhzgGBNUlFOgVnXhPbSw1Qz4sxMV7Cg==",
+  "success": true,
+  "projectFilePath": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.WebAPI/Zawodnicy.WebAPI.csproj",
+  "expectedPackageFiles": [
+    "/home/kamil/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+mkdir Zawodnicy.Core ;
+mkdir Zawodnicy.Infrastructure;
+mkdir Zawodnicy.WebAPI;
+
+cd Zawodnicy.Core;
+dotnet new classlib -f netcoreapp3.1;
+cd ..;
+
+
+ cd Zawodnicy.Infrastructure;
+dotnet new classlib -f netcoreapp3.1;
+cd ..;
+
+cd Zawodnicy.WebAPI;
+dotnet new webapi -f netcoreapp3.1;
+cd ..;
+
+dotnet new sln;
+dotnet sln add Zawodnicy.Core/Zawodnicy.Core.csproj;
+dotnet sln add Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj;
+dotnet sln add Zawodnicy.WebAPI/Zawodnicy.WebAPI.csproj;

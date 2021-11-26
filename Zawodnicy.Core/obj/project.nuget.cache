@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "par1l2JvRkevXXknFNg7l3pJyBc4WnxZxSEqexHsc8LUVvXlyddk5o6salwPD+lHkvXg2DMqvlJaeFDav4f89g==",
+  "success": true,
+  "projectFilePath": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Core/Zawodnicy.Core.csproj",
+  "expectedPackageFiles": [
+    "/home/kamil/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qFUpIYXyaA1lQKdUHU4SEtPqbtI1SQGMSIuTUbNHCyCpWpSoyuuIlBVaaU+wnCT1+yyBgxBxR+y+23H+2cwyCg==",
+  "success": true,
+  "projectFilePath": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "/home/kamil/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}
