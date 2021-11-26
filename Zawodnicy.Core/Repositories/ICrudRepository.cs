@@ -1,17 +1,28 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Zawodnicy.Core.Repositories
 {
     public interface ICrudRepository<TKey, TEntity>
     {
-        TEntity FindById(TKey key);
+        Task AddAsync(TEntity entity);
 
-        IEnumerable<TEntity> FindAll();
+        Task UpdateAsync(TEntity entity);
 
-        TEntity Save(TEntity entity);
+        Task DelAsync(TEntity entity);
 
-        TEntity Update(TEntity entity, TKey id);
+        Task<TEntity> GetAsync(TKey id);
 
-        void Delete(TKey key);
+        Task<IEnumerable<TEntity>> BrowseAllAsync();
+
+        // TEntity FindById(TKey key);
+        //
+        // IEnumerable<TEntity> FindAll();
+        //
+        // TEntity Save(TEntity entity);
+        //
+        // TEntity Update(TEntity entity, TKey id);
+        //
+        // void Delete(TKey key);
     }
 }

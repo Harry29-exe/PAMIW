@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Zawodnicy.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Zawodnicy.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Zawodnicy.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Zawodnicy.Core/1.0.0": {
+      "type": "project",
+      "path": "../Zawodnicy.Core/Zawodnicy.Core.csproj",
+      "msbuildProject": "../Zawodnicy.Core/Zawodnicy.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Zawodnicy.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/home/kamil/.nuget/packages/": {}
@@ -30,7 +49,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Core/Zawodnicy.Core.csproj": {
+              "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Core/Zawodnicy.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
