@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj",
+      "projectUniqueName": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj",
       "projectName": "Zawodnicy.Infrastructure",
-      "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj",
+      "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj",
       "packagesPath": "/home/kamil/.nuget/packages/",
-      "outputPath": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Infrastructure/obj/",
+      "outputPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/kamil/.nuget/NuGet/NuGet.Config"
@@ -50,8 +50,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Core/Zawodnicy.Core.csproj": {
-              "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Core/Zawodnicy.Core.csproj"
+            "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj": {
+              "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj"
             }
           }
         }

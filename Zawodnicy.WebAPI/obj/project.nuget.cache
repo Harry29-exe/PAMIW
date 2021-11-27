@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0+6OvXRS395kzO/RgAayoRSANnTtKkB3778RsKgGApq2W0fJ7pRnzOZ4Cyah/fHy3ULFYvZR85QphB31sacoJw==",
+  "dgSpecHash": "NNWjWQq1zj2aZhmL5U/bMzILT3jfmORt2+AqCX7I6uCAj1uNn/OafWzIn9Eu9yHijAAR1hGWZPQ8LaU+FWMrwQ==",
   "success": true,
-  "projectFilePath": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.WebAPI/Zawodnicy.WebAPI.csproj",
+  "projectFilePath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.WebAPI/Zawodnicy.WebAPI.csproj",
   "expectedPackageFiles": [
     "/home/kamil/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],

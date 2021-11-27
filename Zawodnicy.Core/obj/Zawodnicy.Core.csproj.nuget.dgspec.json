@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Core/Zawodnicy.Core.csproj": {}
+    "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj": {}
   },
   "projects": {
-    "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Core/Zawodnicy.Core.csproj": {
+    "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Core/Zawodnicy.Core.csproj",
+        "projectUniqueName": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj",
         "projectName": "Zawodnicy.Core",
-        "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Core/Zawodnicy.Core.csproj",
+        "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj",
         "packagesPath": "/home/kamil/.nuget/packages/",
-        "outputPath": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Core/obj/",
+        "outputPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kamil/.nuget/NuGet/NuGet.Config"

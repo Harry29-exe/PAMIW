@@ -55,6 +55,7 @@ namespace Zawodnicy.Infrastructure.Services
             jumper.Name = request.Name;
             jumper.Surname = request.Surname;
             jumper.Country = request.Country;
+            _skiJumperRepository.UpdateAsync(jumper);
         }
 
         public async Task DeleteJkiJumper(int id)

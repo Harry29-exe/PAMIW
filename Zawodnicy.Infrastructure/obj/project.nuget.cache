@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hnom0suTpZAAmPN2CtjdVBKu9HbCPW1yp+tFbr62rHP0PO8k5MJtAge+UUHDwg7LWA78fDUSWEFzBH+VQitAyw==",
+  "dgSpecHash": "dz1vEkEvZCSOHj8xYOyX7M40xT9B+4bd4toSYQNulJL+sEV/GOshJ/ir2BrET0ZYwvoeoySxH6ioFhDtez3okg==",
   "success": true,
-  "projectFilePath": "/home/kamil/RiderProjects/Zawodnicy3.1/Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj",
+  "projectFilePath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/home/kamil/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
