@@ -7,9 +7,10 @@ namespace Zawodnicy.Core.Repositories
 {
     public class SkiJumperRepository : ISkiJumperRepository
     {
-        public static List<SkiJumper> _skiJumperMock = new List<SkiJumper>();
+        private static readonly List<SkiJumper> _skiJumperMock = new List<SkiJumper>();
+        private static int nextId = 0;
         
-        public SkiJumperRepository() {
+        static SkiJumperRepository() {
             _skiJumperMock.Add(new SkiJumper()
             {
                 Id = 1,
@@ -36,10 +37,12 @@ namespace Zawodnicy.Core.Repositories
                 Country = "fin",
                 Weight = 172
             });
+            nextId = 4;
         }
 
         public Task AddAsync(SkiJumper entity)
         {
+            entity.Id = nextId++;
             _skiJumperMock.Add(entity);
 
             return Task.CompletedTask;
@@ -73,6 +76,11 @@ namespace Zawodnicy.Core.Repositories
         public async Task<IEnumerable<SkiJumper>> BrowseAllAsync()
         {
             return await Task.FromResult(_skiJumperMock);
+        }
+
+        public async Task<IEnumerable<SkiJumper>> BrowseAllAsyncBy(string country, string name)
+        {
+            return _skiJumperMock.FindAll(j => j.Country.Equals(country) || j.Name.Equals(name));
         }
     }
 }

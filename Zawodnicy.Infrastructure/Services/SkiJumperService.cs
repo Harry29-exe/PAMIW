@@ -27,24 +27,15 @@ namespace Zawodnicy.Infrastructure.Services
 
         public async Task<SkiJumperDTO> GetSkiJumper(int id)
         {
-            var jumper = await this._skiJumperRepository.GetAsync(id);
-            var dto = SkiJumperDTO.@from(jumper);
+            var jumper = await _skiJumperRepository.GetAsync(id);
+            var dto = SkiJumperDTO.from(jumper);
             return dto;
         }
 
         public async Task<IEnumerable<SkiJumperDTO>> GetSkiJumpers(string country, string name)
         {
-            var allJumpers = await _skiJumperRepository.BrowseAllAsync();
-            List<SkiJumperDTO> filteredList = new List<SkiJumperDTO>();
-            foreach(SkiJumper jumper in allJumpers)
-            {
-                if (jumper.Country.Equals(country) && jumper.Name.Equals(name))
-                {
-                    filteredList.Add(SkiJumperDTO.@from(jumper));
-                }
-            }
-
-            return filteredList;
+            var jumpers = await _skiJumperRepository.BrowseAllAsyncBy(country, name);
+            return jumpers.Select(SkiJumperDTO.from);
         }
 
         public async Task AddSkiJumper(CreateSkiJumper request)

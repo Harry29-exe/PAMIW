@@ -28,14 +28,14 @@ namespace Zawodnicy.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSkiJumper(int id)
         {
-            var j = _skiJumperService.GetSkiJumper(id);
+            var j = await _skiJumperService.GetSkiJumper(id);
             return Json(j);
         }
 
         [HttpGet("filter")]
         public async Task<IActionResult>  GetSkiJumpers(string country, string name)
         {
-            var j = _skiJumperService.GetSkiJumpers(country, name);
+            var j = await _skiJumperService.GetSkiJumpers(country, name);
             return Json(j);
         }
 
@@ -49,14 +49,14 @@ namespace Zawodnicy.WebAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> EditSkiJumper([FromBody] UpdateSkiJumper request, int id)
         {
-            _skiJumperService.EditSkiJumper(request, id);
+            await _skiJumperService.EditSkiJumper(request, id);
             return Ok();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteJkiJumper(int id)
         {
-            _skiJumperService.DeleteJkiJumper(id);
+            await _skiJumperService.DeleteJkiJumper(id);
             return Ok();
         }
     }
