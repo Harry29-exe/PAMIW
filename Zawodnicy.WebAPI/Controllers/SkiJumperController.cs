@@ -28,31 +28,36 @@ namespace Zawodnicy.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSkiJumper(int id)
         {
-            throw new NetworkInformationException();
+            var j = _skiJumperService.GetSkiJumper(id);
+            return Json(j);
         }
 
         [HttpGet("filter")]
-        public async Task<IActionResult>  GetSkiJumper(string country, string name)
+        public async Task<IActionResult>  GetSkiJumpers(string country, string name)
         {
-            throw new NetworkInformationException();
+            var j = _skiJumperService.GetSkiJumpers(country, name);
+            return Json(j);
         }
 
         [HttpPost]
         public async Task<IActionResult> AddSkiJumper([FromBody] CreateSkiJumper request)
         {
-            throw new NetworkInformationException();
+            await _skiJumperService.AddSkiJumper(request);
+            return Ok();
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> EditSkiJumper([FromBody] UpdateSkiJumper request, int id)
         {
-            throw new NetworkInformationException();
+            _skiJumperService.EditSkiJumper(request, id);
+            return Ok();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteJkiJumper(int id)
         {
-            throw new NotImplementedException();
+            _skiJumperService.DeleteJkiJumper(id);
+            return Ok();
         }
     }
 }

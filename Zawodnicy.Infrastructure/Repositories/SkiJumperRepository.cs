@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Zawodnicy.Core.Domain;
@@ -39,22 +40,34 @@ namespace Zawodnicy.Core.Repositories
 
         public Task AddAsync(SkiJumper entity)
         {
-            throw new System.NotImplementedException();
+            _skiJumperMock.Add(entity);
+
+            return Task.CompletedTask;
         }
 
         public Task UpdateAsync(SkiJumper entity)
         {
-            throw new System.NotImplementedException();
+            var index = _skiJumperMock.IndexOf(entity);
+            if (index < 0)
+            {
+                throw new ArgumentException();
+            }
+            _skiJumperMock.RemoveAt(index);
+            _skiJumperMock.Add(entity);
+            
+            return Task.CompletedTask;
         }
 
         public Task DelAsync(SkiJumper entity)
         {
-            throw new System.NotImplementedException();
+            _skiJumperMock.Remove(entity);
+            
+            return Task.CompletedTask;
         }
 
         public Task<SkiJumper> GetAsync(long id)
         {
-            throw new System.NotImplementedException();
+            return Task.FromResult(_skiJumperMock.Find(jumper => jumper.Id == id));
         }
 
         public async Task<IEnumerable<SkiJumper>> BrowseAllAsync()

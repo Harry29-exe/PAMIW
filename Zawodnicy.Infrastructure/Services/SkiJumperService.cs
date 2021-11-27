@@ -1,7 +1,10 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Zawodnicy.Core.Domain;
 using Zawodnicy.Core.Repositories;
+using Zawodnicy.Infrastructure.Commands;
 using Zawodnicy.Infrastructure.DTO;
 
 namespace Zawodnicy.Infrastructure.Services
@@ -19,16 +22,54 @@ namespace Zawodnicy.Infrastructure.Services
         {
             var jumpers = await _skiJumperRepository.BrowseAllAsync();
 
-            return jumpers.Select(x => new SkiJumperDTO()
+            return jumpers.Select(SkiJumperDTO.from);
+        }
+
+        public async Task<SkiJumperDTO> GetSkiJumper(int id)
+        {
+            var jumper = await this._skiJumperRepository.GetAsync(id);
+            var dto = SkiJumperDTO.@from(jumper);
+            return dto;
+        }
+
+        public async Task<IEnumerable<SkiJumperDTO>> GetSkiJumpers(string country, string name)
+        {
+            var allJumpers = await _skiJumperRepository.BrowseAllAsync();
+            List<SkiJumperDTO> filteredList = new List<SkiJumperDTO>();
+            foreach(SkiJumper jumper in allJumpers)
             {
-                Id = x.Id,
-                Name = x.Name,
-                Surname = x.Surname,
-                Country = x.Country,
-                BornDate = x.BornDate,
-                Height = x.Height,
-                Weight = x.Weight
-            });
+                if (jumper.Country.Equals(country) && jumper.Name.Equals(name))
+                {
+                    filteredList.Add(SkiJumperDTO.@from(jumper));
+                }
+            }
+
+            return filteredList;
+        }
+
+        public async Task AddSkiJumper(CreateSkiJumper request)
+        {
+            await _skiJumperRepository.AddAsync(
+                new SkiJumper()
+                {
+                    Country = request.Country,
+                    Name = request.Name,
+                    Surname = request.Surname
+                });
+        }
+
+        public async Task EditSkiJumper(UpdateSkiJumper request, int id)
+        {
+            var jumper = await _skiJumperRepository.GetAsync(id);
+            jumper.Name = request.Name;
+            jumper.Surname = request.Surname;
+            jumper.Country = request.Country;
+        }
+
+        public async Task DeleteJkiJumper(int id)
+        {
+            var jumper = await _skiJumperRepository.GetAsync(id);
+            await _skiJumperRepository.DelAsync(jumper);
         }
     }
 }
