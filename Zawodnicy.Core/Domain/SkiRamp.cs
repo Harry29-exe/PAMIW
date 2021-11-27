@@ -5,13 +5,13 @@ namespace Zawodnicy.Core.Domain
 {
     public class SkiRamp
     {
-        private long Id { get; set; }
-        private String Country { get; set; }
-        private String Name { get; set; }
-        private int KPoint { get; set; }
-        private int JudgeNotes { get; set; }
+        public long Id { get; set; }
+        public String Country { get; set; }
+        public String Name { get; set; }
+        public int KPoint { get; set; }
+        public int JudgeNotes { get; set; }
         
-        private City City { get; set; }
-        private List<Competition> Compentitions { get; set; } 
+        public City City { get; set; }
+        public List<Competition> Compentitions { get; set; } 
     }
 }

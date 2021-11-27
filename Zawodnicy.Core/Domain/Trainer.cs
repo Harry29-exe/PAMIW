@@ -5,11 +5,11 @@ namespace Zawodnicy.Core.Domain
 {
     public class Trainer
     {
-        private long Id { get; set; }
-        private string Name { get; set; }
-        private string Surname { get; set; }
-        private DateTime Birthday { get; set; }
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public DateTime Birthday { get; set; }
         
-        private List<SkiJumper> Pupils { get; set; }
+        public List<SkiJumper> Pupils { get; set; }
     }
 }

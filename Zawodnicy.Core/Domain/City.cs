@@ -5,8 +5,8 @@ namespace Zawodnicy.Core.Domain
 {
     public class City
     {
-        private String CityName { get; set; }
-        private long Id { get; set; }
-        private List<SkiRamp> Ramps { get; set; }
+        public String CityName { get; set; }
+        public long Id { get; set; }
+        public List<SkiRamp> Ramps { get; set; }
     }
 }

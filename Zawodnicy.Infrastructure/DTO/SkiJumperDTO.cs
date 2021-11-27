@@ -1,8 +1,8 @@
 using System;
 
-namespace Zawodnicy.Core.Domain
+namespace Zawodnicy.Infrastructure.DTO
 {
-    public class SkiJumper
+    public class SkiJumperDTO
     {
         public long Id { get; set; }
         public string Name { get; set; }
@@ -11,8 +11,6 @@ namespace Zawodnicy.Core.Domain
         public DateTime BornDate { get; set; }
         public float Height { get; set; }
         public float Weight { get; set; }
-        
-        public Trainer Trainer { get; set; }
         
     }
 }

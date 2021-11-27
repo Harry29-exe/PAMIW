@@ -4,9 +4,9 @@ namespace Zawodnicy.Core.Domain
 {
     public class Participation
     {
-        private long Id { get; set; }
+        public long Id { get; set; }
         
-        private Competition Competition { get; set; }
-        private List<SkiJumper> Participants { get; set; }
+        public Competition Competition { get; set; }
+        public List<SkiJumper> Participants { get; set; }
     }
 }

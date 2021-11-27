@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Zawodnicy.Core.Repositories;
+using Zawodnicy.Infrastructure.Services;
 
 namespace Zawodnicy.WebAPI
 {
@@ -26,6 +28,9 @@ namespace Zawodnicy.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddScoped<ISkiJumperRepository, SkiJumperRepository>();
+            services.AddScoped<ISkiJumperService, SkiJumperService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
