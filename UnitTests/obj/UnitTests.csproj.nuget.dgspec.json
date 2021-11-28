@@ -1,0 +1,209 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/UnitTests/UnitTests.csproj": {}
+  },
+  "projects": {
+    "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/UnitTests/UnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/UnitTests/UnitTests.csproj",
+        "projectName": "UnitTests",
+        "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/UnitTests/UnitTests.csproj",
+        "packagesPath": "/home/kamil/.nuget/packages/",
+        "outputPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/UnitTests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/kamil/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj": {
+                "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj"
+              },
+              "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj": {
+                "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.120/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj",
+        "projectName": "Zawodnicy.Core",
+        "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj",
+        "packagesPath": "/home/kamil/.nuget/packages/",
+        "outputPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/kamil/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.120/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj",
+        "projectName": "Zawodnicy.Infrastructure",
+        "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Infrastructure/Zawodnicy.Infrastructure.csproj",
+        "packagesPath": "/home/kamil/.nuget/packages/",
+        "outputPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/kamil/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj": {
+                "projectPath": "/home/kamil/RiderProjects/Zawodnicy3.1 mwo2/Zawodnicy.Core/Zawodnicy.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.120/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
