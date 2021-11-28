@@ -16,7 +16,13 @@ namespace Zawodnicy.Core.Domain
 
         public bool Equals(SkiJumper other)
         {
-            return Id == other.Id && Name == other.Name && Surname == other.Surname && Country == other.Country && BornDate.Equals(other.BornDate) && Height.Equals(other.Height) && Weight.Equals(other.Weight);
+            return Id == other.Id && 
+                   Name == other.Name && 
+                   Surname == other.Surname && 
+                   Country == other.Country &&
+                   BornDate.Equals(other.BornDate) && 
+                   Height.Equals(other.Height) && 
+                   Weight.Equals(other.Weight);
         }
     }
 }

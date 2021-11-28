@@ -14,15 +14,5 @@ namespace Zawodnicy.Core.Repositories
         Task<TEntity> GetAsync(TKey id);
 
         Task<IEnumerable<TEntity>> BrowseAllAsync();
-
-        // TEntity FindById(TKey key);
-        //
-        // IEnumerable<TEntity> FindAll();
-        //
-        // TEntity Save(TEntity entity);
-        //
-        // TEntity Update(TEntity entity, TKey id);
-        //
-        // void Delete(TKey key);
     }
 }
