@@ -23,6 +23,17 @@ namespace UnitTests.Infrastructure.SkiJumperServiceTest
             Repo = mock.Object;
             Service = new SkiJumperService(Repo);
         }
+
+        protected void addAllToDB()
+        {
+            //given
+            var u1 = Utils.CreateJumper1();
+            var u2 = Utils.CreateJumper2();
+            var u3 = Utils.CreateJumper3();
+            DB.Add(u1);
+            DB.Add(u2);
+            DB.Add(u3);
+        }
         
     }
     

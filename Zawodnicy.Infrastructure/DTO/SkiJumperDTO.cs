@@ -5,7 +5,7 @@ namespace Zawodnicy.Infrastructure.DTO
 {
     public class SkiJumperDTO
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Country { get; set; }
@@ -26,6 +26,12 @@ namespace Zawodnicy.Infrastructure.DTO
                 Height = skiJumper.Height,
                 Weight = skiJumper.Weight
             };
+        }
+
+        public bool Equals(SkiJumperDTO other)
+        {
+            Console.WriteLine("equals");
+            return Id == other.Id && Name == other.Name && Surname == other.Surname && Country == other.Country && BornDate.Equals(other.BornDate) && Height.Equals(other.Height) && Weight.Equals(other.Weight);
         }
     }
 }

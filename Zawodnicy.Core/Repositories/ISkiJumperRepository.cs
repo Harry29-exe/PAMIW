@@ -4,7 +4,7 @@ using Zawodnicy.Core.Domain;
 
 namespace Zawodnicy.Core.Repositories
 {
-    public interface ISkiJumperRepository : ICrudRepository<long, SkiJumper>
+    public interface ISkiJumperRepository : ICrudRepository<int, SkiJumper>
     {
         public Task<IEnumerable<SkiJumper>> BrowseAllAsyncBy(string country, string name);
     }

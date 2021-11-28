@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Zawodnicy.Core.Domain;
@@ -20,18 +21,14 @@ namespace UnitTests.Infrastructure.SkiJumperServiceTest
                     DB.RemoveAt(index);
                     DB.Add(enity);
                 });
-            // mock.Setup(repo => repo.AddAsync(It.IsAny<SkiJumper>()))
-            //     .Callback<SkiJumper>(e =>
-            //     {
-            //         e.Id = DB.Count + 1;
-            //         DB.Add(e);
-            //     });
+            mock.Setup(repo => repo.GetAsync(It.IsAny<int>()))
+                .Returns<int>(async (id) => DB[id-1]);
 
             return mock;
         }
 
         [TestMethod]
-        public void should_update_jumper_country()
+        public async Task should_update_jumper_country()
         {
             //given
             var u1 = Utils.CreateJumper1();
@@ -43,7 +40,7 @@ namespace UnitTests.Infrastructure.SkiJumperServiceTest
             {
                 Country = newCountry
             };
-            Service.EditSkiJumper(update, (int) u1.Id);
+            await Service.EditSkiJumper(update, u1.Id);
             
             //then
             var testUser = Utils.CreateJumper1();
@@ -52,13 +49,15 @@ namespace UnitTests.Infrastructure.SkiJumperServiceTest
         }
         
         [TestMethod]
-        public void should_update_jumper_when_many_jumpers_in_db()
+        public async Task should_update_jumper_when_many_jumpers_in_db()
         {
             //given
             var u1 = Utils.CreateJumper1();
             var u2 = Utils.CreateJumper2();
             var u3 = Utils.CreateJumper3();
             DB.Add(u1);
+            DB.Add(u2);
+            DB.Add(u3);
             var newCountry = "us";
             
             //when
@@ -66,12 +65,12 @@ namespace UnitTests.Infrastructure.SkiJumperServiceTest
             {
                 Country = newCountry
             };
-            Service.EditSkiJumper(update, (int) u2.Id);
+            await Service.EditSkiJumper(update, u2.Id);
             
             //then
             var testUser = Utils.CreateJumper2();
             testUser.Country = newCountry;
-            Assert.IsTrue(testUser.Equals(DB[1]));
+            Assert.IsTrue(testUser.Equals(DB.Find(j => j.Id == u2.Id)));
         }
         
     }

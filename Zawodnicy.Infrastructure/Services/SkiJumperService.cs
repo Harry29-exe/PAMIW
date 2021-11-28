@@ -28,6 +28,10 @@ namespace Zawodnicy.Infrastructure.Services
         public async Task<SkiJumperDTO> GetSkiJumper(int id)
         {
             var jumper = await _skiJumperRepository.GetAsync(id);
+            if (jumper == null)
+            {
+                return null;
+            }
             var dto = SkiJumperDTO.from(jumper);
             return dto;
         }
@@ -52,10 +56,10 @@ namespace Zawodnicy.Infrastructure.Services
         public async Task EditSkiJumper(UpdateSkiJumper request, int id)
         {
             var jumper = await _skiJumperRepository.GetAsync(id);
-            jumper.Name = request.Name;
-            jumper.Surname = request.Surname;
-            jumper.Country = request.Country;
-            _skiJumperRepository.UpdateAsync(jumper);
+            if(request.Name != null) jumper.Name = request.Name;
+            if(request.Surname != null) jumper.Surname = request.Surname;
+            if(request.Country != null) jumper.Country = request.Country;
+            await _skiJumperRepository.UpdateAsync(jumper);
         }
 
         public async Task DeleteJkiJumper(int id)

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Zawodnicy.Core.Domain;
@@ -16,13 +17,13 @@ namespace UnitTests.Infrastructure.SkiJumperServiceTest
             var mock = new Mock<ISkiJumperRepository>();
             mock.Setup(repo => 
                     repo.AddAsync(It.IsAny<SkiJumper>()))
-                .Callback<SkiJumper>(jumper => DB.Add(jumper));
+                .Callback<SkiJumper>(async jumper => DB.Add(jumper));
 
             return mock;
         }
 
         [TestMethod]
-        public void should_crete_new_user_with_empty_db()
+        public async Task should_crete_new_user_with_empty_db()
         {
             //given
             var user = new CreateSkiJumper()
@@ -33,7 +34,7 @@ namespace UnitTests.Infrastructure.SkiJumperServiceTest
             };
             
             //when
-            Service.AddSkiJumper(user);
+            await Service.AddSkiJumper(user);
             
             //then
             Assert.IsTrue(DB.Count == 1);
@@ -46,7 +47,7 @@ namespace UnitTests.Infrastructure.SkiJumperServiceTest
         }
         
         [TestMethod]
-        public void should_crete_new_user()
+        public async Task should_crete_new_user()
         {
             //given
             DB.Add(
@@ -60,7 +61,7 @@ namespace UnitTests.Infrastructure.SkiJumperServiceTest
             };
             
             //when
-            Service.AddSkiJumper(user);
+            await Service.AddSkiJumper(user);
             
             //then
             Assert.IsTrue(DB.Count == 2);

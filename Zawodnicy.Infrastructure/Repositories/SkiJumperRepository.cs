@@ -68,7 +68,7 @@ namespace Zawodnicy.Core.Repositories
             return Task.CompletedTask;
         }
 
-        public Task<SkiJumper> GetAsync(long id)
+        public Task<SkiJumper> GetAsync(int id)
         {
             return Task.FromResult(_skiJumperMock.Find(jumper => jumper.Id == id));
         }
