@@ -4,6 +4,13 @@ namespace UnitTests.Infrastructure
 {
     public class Utils
     {
+        /**
+         * Id = 1,
+         * Name = "Alan",
+         * Surname = "G",
+         * Country = "pol",
+         * Weight = 170
+         */
         public static SkiJumper CreateJumper1()
         {
             return new SkiJumper()
@@ -16,6 +23,13 @@ namespace UnitTests.Infrastructure
             };
         }
 
+        /**
+         * Id = 2,
+         * Name = "Adam",
+         * Surname = "P",
+         * Country = "ger",
+         * Weight = 172
+         */
         public static SkiJumper CreateJumper2()
         {
             return new SkiJumper()
@@ -28,6 +42,13 @@ namespace UnitTests.Infrastructure
             };
         }
 
+        /**
+         * Id = 3,
+         * Name = "Martin",
+         * Surname = "S",
+         * Country = "fin",
+         * Weight = 172
+         */
         public static SkiJumper CreateJumper3()
         {
             return new SkiJumper()
